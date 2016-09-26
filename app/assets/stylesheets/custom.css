@@ -1,0 +1,14 @@
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+body {
+  background-image: url(buisiness.jpg);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: black;
+  font-size: 60px;
+}
