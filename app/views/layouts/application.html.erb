@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Top Applicant</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div ng-app="">
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -16,12 +17,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><strong>Top Applicant</strong></a>
+      <a class="navbar-brand" href="#">Top Applicant</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Our Team <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#OurTeam">Our Team <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
         <li class="dropdown">
@@ -40,15 +41,104 @@
       <form class="navbar-form navbar-left" role="search">
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About Us</a></li>
+        <li data-toggle="modal" data-target="#myModal2"><a href="#">Sign Up</a></li>
+        <li data-toggle="modal" data-target="#myModal1"><a href="#">Sign In</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top: 180px">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2>Sign In</h2>
+      </div>
+      <div class="modal-body">
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field"><h4>
+            <%= f.label :email %>:
+            <%= f.email_field :email, autofocus: true %></h4>
+          </div>
+
+          <div class="field"><h4>
+            <%= f.label :password %>:
+            <%= f.password_field :password, autocomplete: "off" %></h4>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="field"><h4>
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %></h4>
+            </div>
+          <% end -%>
+
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+        <% end -%>
+      </div>
+      <div class="modal-footer">
+        <div class="actions">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit "Sign in", :class => 'btn btn-primary'%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top: 180px">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2>Sign Up</h2>
+      </div>
+      <div class="modal-body">
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="field"><h4>
+            <%= f.label :email %>:
+            <%= f.email_field :email, autofocus: true %></h4>
+          </div>
+
+          <div class="field"><h4>
+            <%= f.label :password %>:
+            <% if @validatable %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "off" %></h4>
+          </div>
+
+          <div class="field"><h4>
+            <%= f.label :password_confirmation %>:
+            <%= f.password_field :password_confirmation, autocomplete: "off" %></h4>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <div class="actions">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit "Sign Up", :class => 'btn btn-primary'%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <div class="container">
 <%= yield %>
+</div><br><br><br><br><br>
+  <div class="bottom">
+  </div>
 </div>
 </body>
 </html>

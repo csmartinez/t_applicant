@@ -3,12 +3,89 @@
     width: 100%;
     height: auto;
 }
-body {
+
+/*.container {
+  background-color: lightgray;
+}*/
+
+#item1 {
+  padding-bottom: 310px;
   background-image: url(buisiness.jpg);
   background-repeat: no-repeat;
 }
 
-h1 {
+#item2 {
+  padding-bottom: 80px;
+  background-image: url(buisiness2.jpg);
+  background-repeat: no-repeat;
+}
+
+.inText1 {
+  margin-left: 90px;
+  padding-top: 100px;
+}
+
+.inText2 {
+  margin-left: 90px;
+  padding-top: 330px;
+  color: white;
+}
+
+#item1 h1 {
   color: black;
   font-size: 60px;
 }
+
+#item2 h1 {
+  font-size: 60px;
+  color: white;
+}
+
+#item2 h2 {
+  color: white;
+}
+
+.col1 {
+  float: left;
+  margin-left: 10px;
+  width: 33%;
+  padding-top: 40px;
+}
+
+.col2 {
+  float: left;
+  margin-left: 10px;
+  width: 33%;
+  padding-top: 40px;
+}
+
+.col3 {
+  float: left;
+  margin-left: 10px;
+  width: 33%auto;
+  padding-top: 40px;
+}
+
+.ourTeam {
+  margin-left: 50px;
+}
+
+.bottom {
+  background: linear-gradient(lightgray, gray);
+  width: 100%;
+  height: 200px;
+  bottom:0;
+}
+
+.resumeInfo {
+  margin-left: 50px;
+  float: left;
+}
+/*.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #48C9B0;
+    border-color: #48C9B0;
+}*/
