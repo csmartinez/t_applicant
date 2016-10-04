@@ -1,0 +1,8 @@
+<% if current_user %>
+  <h1><%= current_user.fname %> <%= current_user.lname %> <small><a href="">Resume</a></small></h1><br>
+  <h3>Desired Career: <small><%= current_user.career %></small></h3>
+  <h3>Career Goals: <small><%= current_user.goals %></small></h3>
+  <!-- <h3>Resume Concerns: <small></small></h3> -->
+<% else %>
+  <h1>Stranger!</h1>
+<% end %>

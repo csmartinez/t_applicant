@@ -9,15 +9,17 @@
 }*/
 
 #item1 {
-  padding-bottom: 310px;
+  padding-bottom: 270px;
   background-image: url(buisiness.jpg);
   background-repeat: no-repeat;
+  background-size: 100% 700px;
 }
 
 #item2 {
-  padding-bottom: 80px;
+  padding-bottom: 70px;
   background-image: url(buisiness2.jpg);
   background-repeat: no-repeat;
+  background-size: 100% 700px;
 }
 
 .inText1 {
@@ -27,7 +29,7 @@
 
 .inText2 {
   margin-left: 90px;
-  padding-top: 330px;
+  padding-top: 300px;
   color: white;
 }
 
@@ -91,6 +93,46 @@ background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 2
   margin-left: 150px;
   margin-right: 10px;
   padding-bottom: 180px;
+}
+
+textarea:focus {
+  outline: none !important;
+  border-color: gray;
+  box-shadow: 0 0 8px #719ECE;
+}
+
+textarea {
+  border: solid 1px lightgray !important;
+}
+
+.threeAmigos {
+  /*margin-left: 150px;*/
+  margin-top: 60px;
+}
+
+.icons {
+  font-size: 60pt;
+  color: #545555;
+  margin: 0 auto;
+  width: 18%;
+  margin-left: 130px;
+}
+
+.point {
+  width: 18%;
+  float: left;
+  margin: 0 auto;
+  margin-left: 130px;
+}
+
+.point p {
+  font-family: "Times New Roman";
+  font-size: 13pt;
+  color: #545555;
+}
+
+.points h1 {
+  font-size: 30pt;
 }
 /*.btn-primary,
 .btn-primary:hover,

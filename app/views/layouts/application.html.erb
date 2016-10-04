@@ -17,14 +17,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Top Applicant</a>
+      <a class="navbar-brand" href="/">Top Applicant</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#OurTeam">Our Team <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/team/index">Our Team <span class="sr-only">(current)</span></a></li>
         <li><a href="#Services">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a class="notice"><p class="text-info"><%= notice %></p></a></li>
+        <li><a class="alert"><p class="text-info"><%= alert %></p></a></li>
         <li class="dropdown">
           <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -41,8 +42,13 @@
       <form class="navbar-form navbar-left" role="search">
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+        <li><a href="/home/show">Welcome, <%= current_user.fname %> <%= current_user.lname %>!</a></li>
+        <li><%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %></li>
+        <% else %>
         <li data-toggle="modal" data-target="#myModal2"><a href="#">Sign Up</a></li>
         <li data-toggle="modal" data-target="#myModal1"><a href="#">Sign In</a></li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -82,7 +88,7 @@
       <div class="modal-footer">
         <div class="actions">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit "Sign in", :class => 'btn btn-primary'%>
+          <%= f.submit "Sign in", :class => 'btn btn-info'%>
         </div>
         <% end %>
       </div>
@@ -90,22 +96,49 @@
   </div>
 </div>
 
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top: 180px">
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top: 120px">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h2>Sign Up</h2>
+        <h2>Sign Up <small>It's free!</small></h2>
       </div>
       <div class="modal-body">
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
+<table><tr>
+          <td><div class="field"><h4>
+            <%= f.label :firstname %>:
+            <%= f.text_field :fname, autofocus: true %></h4>
+          </div></td>
 
-          <div class="field"><h4>
+          <td><div class="field"><h4>
+            <%= f.label :lastname %>:
+            <%= f.text_field :lname, autofocus: true %></h4>
+          </div></td>
+        </tr><tr>
+        </table><table>
+
+          <td><div class="field"><h4>
             <%= f.label :email %>:
             <%= f.email_field :email, autofocus: true %></h4>
-          </div>
+          </div></td>
+          </tr><tr>
+
+          <td><div class="field"><h4>
+            <%= f.label :Desired_Career %>:
+            <%= f.text_field :career, autofocus: true %></h4>
+          </div></td>
+          </tr><tr>
+
+          <td><div class="field"><h4>
+            <%= f.label :goals, "Briefly describe your career goals" %>:<br>
+            <%= f.text_area :goals, autofocus: true, size: "60x4" %></h4>
+          </div></td>
+          </tr><tr>
+        </tr>
+        </table>
 
           <div class="field"><h4>
             <%= f.label :password %>:
@@ -124,17 +157,15 @@
       <div class="modal-footer">
         <div class="actions">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <%= f.submit "Sign Up", :class => 'btn btn-primary'%>
+          <%= f.submit "Sign Up", :class => 'btn btn-info'%>
         </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <div class="container">
+
 <%= yield %>
 </div><br><br><br><br><br>
   <!-- <div class="bottom">
