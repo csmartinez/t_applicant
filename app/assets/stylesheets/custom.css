@@ -6,14 +6,14 @@
 
 #item1 {
   padding-bottom: 270px;
-  background-image: asset-data-url("business.jpg");
+  background-image: url(buisiness.jpg);
   background-repeat: no-repeat;
   background-size: 100% 700px;
 }
 
 #item2 {
   padding-bottom: 70px;
-  background-image: asset-data-url("business2.jpg");
+  background-image: url(buisiness2.jpg);
   background-repeat: no-repeat;
   background-size: 100% 700px;
 }
