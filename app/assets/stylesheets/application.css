@@ -12,6 +12,5 @@
  *
  *= require_tree .
  *= require_self
- *= require owl.theme
  */
  @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css")
