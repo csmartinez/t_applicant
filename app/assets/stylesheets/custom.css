@@ -126,13 +126,33 @@ textarea {
 }
 
 .point p {
-  font-family: "Times New Roman";
+  /*font-family: "Times New Roman";*/
   font-size: 13pt;
   color: #545555;
 }
 
 .points h1 {
   font-size: 30pt;
+}
+
+.careerFields {
+  width: 16%;
+  float: left;
+  position: fixed;
+}
+
+.partners {
+  margin-left: 50px;
+  float: right;
+}
+
+.ra {
+  float: right;
+  margin-right: 70px;
+}
+
+.blue {
+  color: #545555;
 }
 /*.btn-primary,
 .btn-primary:hover,
