@@ -158,10 +158,15 @@ textarea {
 .ra {
   float: right;
   margin-right: 70px;
+  font-family: helvetica;
 }
 
 .blue {
   color: #545555;
+}
+
+.careerFields {
+  font-family: helvetica;
 }
 /*.btn-primary,
 .btn-primary:hover,
