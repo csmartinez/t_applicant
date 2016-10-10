@@ -152,6 +152,7 @@ textarea {
 
 .partners {
   margin-left: 50px;
+  width: 75%;
   float: right;
 }
 
@@ -167,6 +168,37 @@ textarea {
 
 .careerFields {
   font-family: helvetica;
+}
+
+.leftInfo {
+  width: 30%;
+  float: left;
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 25%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+  margin-right: 20px;
+  border-radius: 15px 50px;
+  padding: 10px;
+  color: black;
+  margin-left: 50px;
+}
+
+.centerInfo {
+  width: 30%;
+  float: left;
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 25%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+  margin-right: 20px;
+  border-radius: 15px 50px;
+  padding: 10px;
+  color: black;
+}
+
+.rightInfo {
+  width: 30%;
+  float: left;
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 25%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+  margin-right: 10px;
+  border-radius: 15px 50px;
+  padding: 10px;
+  color: black;
 }
 /*.btn-primary,
 .btn-primary:hover,
