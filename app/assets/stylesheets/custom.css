@@ -25,7 +25,7 @@
 
 #item2 {
   padding-bottom: 70px;
-  background-image: url(buisiness2.jpg);
+  background-image: url(business3.jpg);
   background-repeat: no-repeat;
   background-size: 100% 700px;
 }
@@ -38,7 +38,6 @@
 .inText2 {
   margin-left: 90px;
   padding-top: 300px;
-  color: white;
 }
 
 #item1 h1 {
@@ -83,8 +82,13 @@
 .bottom {
   background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 25%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
   width: 100%;
-  height: 300px;
-  bottom:0;
+  height: 400px;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
 }
 
 .resumeInfo {
@@ -199,6 +203,34 @@ textarea {
   border-radius: 15px 50px;
   padding: 10px;
   color: black;
+}
+
+.ee {
+  display: inline;
+}
+
+.field h4 {
+  color: black;
+}
+
+input, textarea {
+  color: #78797B;
+}
+
+.example {
+  float: left;
+  width: 50%;
+}
+
+.response {
+  float: left;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.exTitle {
+  margin-left: 30px;
+  width: 100%;
 }
 /*.btn-primary,
 .btn-primary:hover,

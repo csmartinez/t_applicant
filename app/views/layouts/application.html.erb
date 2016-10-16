@@ -111,41 +111,41 @@
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
-<table><tr>
-          <td><div class="field"><h4>
-            <%= f.label :firstname %>:
-            <%= f.text_field :fname, autofocus: true %></h4>
-          </div></td>
+          <table><tr>
+            <td><div class="field"><h4>
+              <%= f.label :firstname %>:
+              <%= f.text_field :fname, autofocus: true %></h4>
+            </div></td>
 
-          <td><div class="field"><h4>
-            <%= f.label :lastname %>:
-            <%= f.text_field :lname, autofocus: true %></h4>
-          </div></td>
-        </tr><tr>
-        </table><table>
-
-          <td><div class="field"><h4>
-            <%= f.label :email %>:
-            <%= f.email_field :email, autofocus: true %></h4>
-          </div></td>
+            <td><div class="field"><h4>
+              <%= f.label :lastname %>:
+              <%= f.text_field :lname, autofocus: false %></h4>
+            </div></td>
           </tr><tr>
+          </table>
 
-          <td><div class="field"><h4>
-            <%= f.label :Desired_Career %>:
-            <%= f.text_field :career, autofocus: true %></h4>
-          </div></td>
-          </tr><tr>
+          <table><tr>
+            <td><div class="field"><h4>
+              Email:<%= f.text_field :email, autofocus: false, type: "email" %></h4>
+            </div></td>
 
-          <td><div class="field"><h4>
-            <%= f.label :goals, "Briefly describe your career goals" %>:<br>
-            <%= f.text_area :goals, autofocus: true, size: "60x4" %></h4>
-          </div></td>
-          </tr><tr>
-        </tr>
-        </table>
+            </tr><tr>
+            <td><div class="field"><h4>
+              <%= f.label :Desired_Career %>:
+              <%= f.text_field :career, autofocus: false %></h4>
+            </div></td>
+            </tr><tr>
+
+            <td><div class="field"><h4>
+              Briefly describe your career goals:
+              <%= f.text_area :goals, autofocus: false, size: "60x4" %></h4>
+            </div></td>
+            </tr><tr>
+          </tr>
+          </table>
 
           <div class="field"><h4>
-            <%= f.label :password %>:
+            Password:
             <% if @validatable %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
             <% end %>
@@ -173,8 +173,8 @@
 
 <%= yield %>
 </div><br><br>
-  <!-- <div class="bottom">
-  </div> -->
+  <div class="bottom">
+  </div>
 </div>
 </body>
 </html>
