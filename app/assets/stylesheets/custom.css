@@ -38,6 +38,27 @@
               color 0.3s ease-in;
 }
 
+.blk-ghost-button {
+  display: inline-block;
+  width: 130px;
+  padding: 8px;
+  color: black;
+  border: 3px solid black;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.blk-ghost-button:hover,
+.blk-ghost-button:active {
+  color: #474747;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+
 #item1 {
   padding-bottom: 270px;
   background-image: url(business5.jpg);
@@ -225,7 +246,7 @@ textarea {
 }
 
 .careerFields {
-  width: 16%;
+  width: 100px;
   float: left;
   position: fixed;
 }
@@ -234,6 +255,7 @@ textarea {
   margin-left: 50px;
   width: 75%;
   float: right;
+  padding-bottom: 1000px;
 }
 
 .ra {
@@ -307,6 +329,49 @@ input, textarea {
 .exTitle {
   margin-left: 30px;
   width: 100%;
+}
+
+.front, .back{
+  padding: 10px;
+  padding-left: 10px;
+  width: 100% !important;
+  height: 100px !important;
+  color: white;
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 25%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+  /*border-radius: 15px 20px;*/
+  border-left: 13px solid #224E7A;
+  cursor: pointer;
+}
+
+.front h1, .back p {
+  color: black;
+}
+
+
+.partnerBtn {
+  width: 200px;
+  padding: 8px;
+  color: white;
+  border: 3px solid #fff;
+  background-color: #224E7A;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.partnerBtn a {
+  color: white;
+}
+
+.partnerBtn:hover,
+.partnerBtn:active {
+  background-color: #1D4267;
+  color: #fff;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
 }
 /*.btn-primary,
 .btn-primary:hover,
