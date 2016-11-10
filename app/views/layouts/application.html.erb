@@ -70,12 +70,12 @@
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field"><h4>
-            <%= f.label :email %>:
+            <%= f.label :email %>
             <%= f.email_field :email, autofocus: true %></h4>
           </div>
 
           <div class="field"><h4>
-            <%= f.label :password %>:
+            <%= f.label :password %>
             <%= f.password_field :password, autocomplete: "off" %></h4>
           </div>
 
