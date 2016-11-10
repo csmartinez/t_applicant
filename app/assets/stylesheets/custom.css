@@ -40,21 +40,21 @@
 
 .blk-ghost-button {
   display: inline-block;
-  width: 130px;
+  width: 200px;
   padding: 8px;
-  color: black;
-  border: 3px solid black;
+  color: #3d3d3d;
+  border: 3px solid #3d3d3d;
   text-align: center;
   outline: none;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: background-color 0.2s ease-out,
               color 0.2s ease-out;
 }
 
 .blk-ghost-button:hover,
 .blk-ghost-button:active {
-  color: #474747;
+  color: black;
   transition: background-color 0.3s ease-in,
               color 0.3s ease-in;
 }
@@ -93,6 +93,7 @@
   background-repeat: no-repeat;
   background-size: 100% 700px;
   max-width: 1300px;
+  padding-right: 20px;
 }
 
 .inText1 {
@@ -111,7 +112,7 @@
 }
 
 .inText4 {
-  margin-left: 670px;
+  margin-left: 710px;
   padding-top: 100px;
 }
 
@@ -135,11 +136,11 @@
 
 #item3 h1 {
   font-size: 60px;
-  color: black;
+  color: #3d3d3d;
 }
 
-#item3 h2 {
-  color: #474747;
+#item3 h3 {
+  color: #3d3d3d;
 }
 
 #item4 h1 {
@@ -147,7 +148,7 @@
   color: white;
 }
 
-#item4 h2 {
+#item4 h3 {
   color: white;
 }
 
@@ -290,7 +291,8 @@ textarea {
 .careerFields {
   width: 100px;
   float: left;
-  position: fixed;
+  font-family: helvetica;
+  /*margin-top: 20px;*/
 }
 
 .partners {
@@ -308,10 +310,6 @@ textarea {
 
 .blue {
   color: #545555;
-}
-
-.careerFields {
-  font-family: helvetica;
 }
 
 .leftInfo {

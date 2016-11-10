@@ -16,4 +16,21 @@ $(document).ready(function() {
 
   });
 
+  var fixmeTop = $('.pg').offset().top;
+  $(window).scroll(function() {
+    var currentScroll = $(window).scrollTop();
+    if (currentScroll >= fixmeTop) {
+        $('.careerFields').css({
+            position: 'fixed',
+            top: '0',
+            "margin-top": "80px"
+        });
+    } else {
+        $('.careerFields').css({
+            position: 'static',
+            "margin-top": "0px"
+        });
+    }
+});
+
 });
