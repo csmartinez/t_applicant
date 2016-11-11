@@ -1,4 +1,124 @@
 <% if current_user %>
+  <% if current_user.admin? %>
+    <h1>Dashboard</h1><br>
+    <div class="dashPanel">
+      <h4 ng-click="completed = !completed; summary = false">Completed <span ng-show="completed" style="float: right; margin-right: 20px; font-size: 25px;" class="glyphicon glyphicon-chevron-down"></span></h4>
+    </div>
+
+    <div class="dashPanel">
+      <h4 ng-click="completed = false; summary = !summary" style="margin-left: 70px;">Summary <span ng-show="summary" style="float: right; margin-right: 20px; font-size: 25px;" class="glyphicon glyphicon-chevron-down"></span></h4>
+    </div>
+    <br><br><br><br>
+    <div class="w3-animate-zoom" ng-show="completed">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><h4>Name</h4></th>
+        <th><h4>Desired Position</h4></th>
+        <th><h4>Date</h4></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><h5>Doe, John</h5></td>
+        <td><h5>PHP Programmer</h5></td>
+        <td><h5>12 June 2016</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Smith, Stacy</h5></td>
+        <td><h5>Sales Manager</h5></td>
+        <td><h5>15 June 2016</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Johnson, Gary</h5></td>
+        <td><h5>Dental Assistant</h5></td>
+        <td><h5>2 August 2016</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Doe, Jack</h5></td>
+        <td><h5>PHP Programmer</h5></td>
+        <td><h5>12 June 2016</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Smith, Stanley</h5></td>
+        <td><h5>Sales Manager</h5></td>
+        <td><h5>15 June 2016</h5></td>
+      </tr>
+      <tr>
+        <td><h5>Moore, Gary</h5></td>
+        <td><h5>Dental Assistant</h5></td>
+        <td><h5>2 August 2016</h5></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 style="float: right;">These are your reviews from 23 November 2016 to present. The next term begins on 7 December 2016. </h4>
+  <br><br><h4 style="float: right;">TOTAL: $87.60</h4>
+</div>
+    <div class="w3-animate-zoom summary" ng-show="summary">
+      <h2><%= current_user.fname %> <%= current_user.lname %></h3>
+      <br>
+      <h4><a href="/">October 2016</a></h4>
+      <h4><a href="/">September 2016</a></h4>
+      <h4><a href="/">August 2016</a></h4>
+      <br>
+      <h4>Please e-mail <a href="/">carli@top-applicant.com</a> if you have any questions.</h4>
+      <br>
+    </div>
+
+    <div class="dashPanel2">
+      <h4>Dashboard</h4>
+    </div>
+    <table class="w3-table w3-striped w3-bordered">
+      <thead>
+        <tr>
+          <th><h4>Name</h4></th>
+          <th><h4>Desired Position</h4></th>
+          <th><h4>Date</h4></th>
+          <th><h4></h4></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><h5>Doe, John</h5></td>
+          <td><h5>PHP Programmer</h5></td>
+          <td><h5>3 June 2016</h5></td>
+          <td><h5><a href="/">OPEN</a></h5></td>
+        </tr>
+        <tr>
+          <td><h5>Smith, Stacy</h5></td>
+          <td><h5>Sales Manager</h5></td>
+          <td><h5>15 June 2016</h5></td>
+          <td><h5><a href="/">OPEN</a></h5></td>
+        </tr>
+        <tr>
+          <td><h5>Johnson, Gary</h5></td>
+          <td><h5>Dental Assistant</h5></td>
+          <td><h5>2 August 2016</h5></td>
+          <td><h5><a href="/">OPEN</a></h5></td>
+        </tr>
+        <tr>
+          <td><h5>Doe, Jack</h5></td>
+          <td><h5>PHP Programmer</h5></td>
+          <td><h5>12 June 2016</h5></td>
+          <td><h5><a href="/">OPEN</a></h5></td>
+        </tr>
+        <tr>
+          <td><h5>Smith, Stanley</h5></td>
+          <td><h5>Sales Manager</h5></td>
+          <td><h5>15 June 2016</h5></td>
+          <td><h5><a href="/">OPEN</a></h5></td>
+        </tr>
+        <tr>
+          <td><h5>Moore, Gary</h5></td>
+          <td><h5>Dental Assistant</h5></td>
+          <td><h5>2 August 2016</h5></td>
+          <td><h5><a href="/">OPEN</a></h5></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <h4 style="float: right;">You have no outstanding incomplete reviews.<br><br></h4>
+  <% else %>
   <h2><%= current_user.fname %> <%= current_user.lname %> <small><%= current_user.email %></small></h2>
   <br>
   <h3>Desired Career: <small><%= current_user.career %></small></h3>
@@ -62,9 +182,10 @@
     <button class="btn btn-info">Order</button>
     <br><br><br>
   </div>
+<% end %>
 <% else %>
   <h1>Stranger!</h1>
-<% end %>
-<div style="height: 500px;"></div>
+  <% end %>
+<!-- <div style="height: 500px;"></div> -->
 
 </div>

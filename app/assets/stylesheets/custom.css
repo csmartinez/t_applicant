@@ -40,10 +40,10 @@
 
 .blk-ghost-button {
   display: inline-block;
-  width: 200px;
+  width: 170px;
   padding: 8px;
-  color: #3d3d3d;
-  border: 3px solid #3d3d3d;
+  color: black;
+  border: 3px solid black;
   text-align: center;
   outline: none;
   text-decoration: none;
@@ -136,11 +136,11 @@
 
 #item3 h1 {
   font-size: 60px;
-  color: #3d3d3d;
+  color: black;
 }
 
 #item3 h3 {
-  color: #3d3d3d;
+  color: black;
 }
 
 #item4 h1 {

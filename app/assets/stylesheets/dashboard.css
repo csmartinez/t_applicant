@@ -1,0 +1,46 @@
+.dashPanel h4{
+  width: 46%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f7f7+0,f1f1f1+50,e1e1e1+51,f6f6f6+100 */
+  background: rgb(247,247,247); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgba(247,247,247,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(247,247,247,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(247,247,247,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f6f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height: 50px;
+  padding: 8px;
+  float: left;
+  cursor: pointer;
+}
+
+.dashPanel h4 {
+  color: black;
+  font-size: 16pt;
+}
+
+.summary {
+  background-color: #F9F9F9;
+  padding: 1rem;
+  padding-left: 30px;
+}
+
+.summary a {
+  color: #2f6faf;
+}
+
+.summary a:hover {
+  color: #204477;
+}
+
+.dashPanel2 h4 {
+  width: 100%;
+  background-color: #204477;
+  height: 50px;
+  padding: 8px;
+  float: left;
+  color: white;
+  margin-top: 30px;
+}
+
+td a, td a:hover {
+  color: #204477;
+}
