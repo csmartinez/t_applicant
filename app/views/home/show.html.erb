@@ -1,6 +1,6 @@
 <% if current_user %>
   <% if current_user.admin? %>
-    <h1>Dashboard</h1><br>
+    <h1><%= image_tag("feather.png", height: '60', width: '30') %><span style="padding-left: 10px;">Dashboard</span></h1>
     <div class="dashPanel">
       <h4 ng-click="completed = !completed; summary = false">Completed <span ng-show="completed" style="float: right; margin-right: 20px; font-size: 25px;" class="glyphicon glyphicon-chevron-down"></span></h4>
     </div>
