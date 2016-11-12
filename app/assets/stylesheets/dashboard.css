@@ -10,6 +10,7 @@
   padding: 8px;
   float: left;
   cursor: pointer;
+  padding-left: 15px;
 }
 
 .dashPanel h4 {
@@ -24,21 +25,22 @@
 }
 
 .summary a {
-  color: #c09853;
+  color: #224E7A;
 }
 
 .summary a:hover {
-  color: #c09853;
+  color: #224E7A;
 }
 
 .dashPanel2 h4 {
   width: 100%;
-  background-color: #204477;
+  background-color: #224E7A;
   height: 50px;
   padding: 8px;
   float: left;
   color: white;
   margin-top: 30px;
+  padding-left: 15px;
 }
 
 td a, td a:hover {

@@ -205,7 +205,8 @@
 }
 
 .bio a {
-  color: #c09853;
+  /*color: #c09853;*/
+  color: white;
 }
 
 .cline {
