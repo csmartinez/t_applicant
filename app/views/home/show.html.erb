@@ -119,18 +119,26 @@
     <br>
     <h4 style="float: right;">You have no outstanding incomplete reviews.<br><br></h4>
   <% else %>
-  <h2><%= current_user.fname %> <%= current_user.lname %> <small><%= current_user.email %></small></h2>
+  <div class="profileL">
+    <h2><%= current_user.fname %> <%= current_user.lname %> <small><%= current_user.email %></small></h2>
+    <br>
+    <h3>Desired Career: <small><%= current_user.career %></small></h3>
+    <h3>Career Goals: <small><%= current_user.goals %></small></h3>
+  </div>
+  <div class="profileR">
+    <br>
+    <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #666666">Edit Profile</button></h4>
+    <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #666666">View Orders</button></h4>
+    <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #666666">Sign Out</button></h4>
+  </div>
   <br>
-  <h3>Desired Career: <small><%= current_user.career %></small></h3>
-  <h3>Career Goals: <small><%= current_user.goals %></small></h3>
+  <!-- <h3>Progress</h4>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-info" style="width: 25%"></div>
+    </div> -->
   <!-- <h3>Resume Concerns: <small></small></h3> -->
-  <br>
-  <h3>Progress</h4>
-  <div class="progress progress-striped active">
-  <div class="progress-bar progress-bar-info" style="width: 25%"></div>
-</div>
 
-</div>
+
   <br><br>
   <div class="leftInfo">
     <h2>Cover Letter Review</h2>
@@ -144,7 +152,7 @@
     </ul>
     <p>Derp kermen ermen Derp kermen ermen Derp kermen ermen</p>
     <p>Derp kermen ermen Derp kermen ermen Derp kermen ermen</p>
-    <button class="btn btn-info">Order</button>
+  <button class="w3-btn" style="height: 35px; width: 70px; background-color: #224E7A">Order</button>
     <br><br><br>
   </div>
   <div class="centerInfo">
@@ -161,7 +169,7 @@
     <option>Accounting</option>
   </select>
 </div>
-  <button class="btn btn-info">Order</button>
+  <button class="w3-btn" style="height: 35px; width: 70px; background-color: #224E7A">Order</button>
   <!-- <p><br>Derp kermen ermen Derp kermen ermen Derp kermen ermen</p>
   <p>Derp kermen ermen Derp kermen ermen Derp kermen ermen</p> -->
   <br><br><br>
@@ -179,7 +187,7 @@
     </ul>
     <p>Resume must be submitted in English. Evaluation and editing will be done on a seperate
       Google Docs file and e-mailed with your review as well as tips and advice.</p>
-    <button class="btn btn-info">Order</button>
+      <button class="w3-btn" style="height: 35px; width: 70px; background-color: #224E7A">Order</button>
     <br><br><br>
   </div>
   <div style="height: 500px;"></div>
