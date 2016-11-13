@@ -104,6 +104,24 @@ background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 2
     color: black;
 }
 
+.leftInfo button {
+  float: right;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+.centerInfo button {
+  float: right;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+.rightInfo button {
+  float: right;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
 .rfText {
   margin-left: 150px;
   margin-right: 10px;
@@ -184,7 +202,7 @@ textarea {
   padding: 10px;
   color: black;
   margin-top: 100px;
-  height: 500px;
+  height: 600px;
   max-width: 350px;
 }
 
@@ -196,7 +214,7 @@ textarea {
   /*border-radius: 25px 0px;*/
   padding: 10px;
   color: black;
-  height: 500px;
+  height: 600px;
   margin-top: 100px;
   max-width: 350px;
 }
@@ -209,7 +227,7 @@ textarea {
   padding: 10px;
   color: black;
   margin-top: 100px;
-  height: 500px;
+  height: 600px;
   max-width: 350px;
 }
 
