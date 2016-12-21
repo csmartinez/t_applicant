@@ -31,6 +31,10 @@
   padding-top: 40px;
 }
 
+#faq {
+  cursor: default;
+}
+
 .ourTeam {
   margin-left: 50px;
 }
@@ -235,7 +239,7 @@ textarea {
   width: 67%;
   float: left;
   max-width: 900px;
-  height: 230px;
+  height: 240px;
   /*background-color: lightgray;*/
   padding: 20px;
 }

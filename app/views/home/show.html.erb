@@ -119,15 +119,15 @@
     <br>
     <h4 style="float: right;">You have no outstanding incomplete reviews.<br><br></h4>
   <% else %>
-  <div class="profileL">
-        <h2 style="color: black;"><%= current_user.fname %> <%= current_user.lname %> </h2>
+  <div class="profileL" style="overflow: scroll;">
+        <h2 style="color: #404040;" class="w3-bottombar w3-border-dark-grey"><%= current_user.fname %> <%= current_user.lname %> </h2><br>
         <!-- <small><%= current_user.email %></small> -->
-        <h4 style="color: gray; margin-top: 40px;">Desired Job Title: <small><%= current_user.career %></small></h4>
-        <h4 style="color: gray;">Career Field: <small>Computer Science</small></h4>
-        <h4 style="color: gray;">Career Goals: <small><%= current_user.goals %></small></h4>
+        <h4 style="color: #595959;">Desired Job Title: <small> <%= current_user.career %></small></h4>
+        <h4 style="color: #595959;">Career Field: <small> Computer Science</small></h4>
+        <h4 style="color: #595959;">Career Goals: <small> <%= current_user.goals %></small></h4>
   </div>
   <div class="profileR">
-    <br>
+    <br><br>
     <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #595959">Edit Profile</button></h4>
     <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #595959">My Order(s)</button></h4>
     <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #595959">Sign Out</button></h4>
@@ -142,9 +142,9 @@
 
   <br><br>
   <div class="leftInfo">
-    <h2 style="margin-left: 10px; color: #666666;">Cover Letter Review</h2>
-    <h3 style="margin-left: 90px; color: #666666;">$49.95 <small>Plus tax</small></h3>
-    <ul class="w3-ul w3-card-4 w3-tiny ls">
+    <h2 style="margin-left: 10px; color: black;">Cover Letter Review</h2>
+    <h3 style="margin-left: 90px; color: black;">$49.95 <small>Plus tax</small></h3>
+    <ul class="w3-ul w3-card-4 w3-tiny ls" style="background-color: #f6f6f6;">
       <li><h3>✔  1 full-page evaluation of a cover letter</h3></li>
       <li><h3>✔  Honest feedback and job search advice</h3></li>
       <li><h3>✔  Line-by-line comments and evaluation</h3></li>
@@ -154,9 +154,9 @@
     <h4><button class="w3-btn" style="height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
   </div>
   <div class="centerInfo">
-    <h2 style="margin-left: 40px; color: #666666;">Resume Review</h2>
-    <h3 style="margin-left: 90px; color: #666666;">$59.95 <small>Plus tax</small></h3>
-    <ul class="w3-ul w3-card-4 w3-tiny ls">
+    <h2 style="margin-left: 40px; color: black;">Resume Review</h2>
+    <h3 style="margin-left: 90px; color: black;">$59.95 <small>Plus tax</small></h3>
+    <ul class="w3-ul w3-card-4 w3-tiny ls" style="background-color: #f6f6f6;">
       <li><h3>✔  1 full-page evaluation of a resume</h3></li>
       <li><h3>✔  Honest feedback and job search advice</h3></li>
       <li><h3>✔  Formatting and career-unique advice</h3></li>
@@ -167,9 +167,9 @@
   <br><br><br>
   </div>
   <div class="rightInfo">
-    <h2 style="margin-left: 30px; color: #666666;">Complete Editing</h2>
-    <h3 style="margin-left: 90px; color: #666666;">$69.95 <small>Plus tax</small></h3>
-    <ul class="w3-ul w3-card-4 w3-tiny ls">
+    <h2 style="margin-left: 30px; color: black;">Complete Editing</h2>
+    <h3 style="margin-left: 90px; color: black;">$69.95 <small>Plus tax</small></h3>
+    <ul class="w3-ul w3-card-4 w3-tiny ls" style="background-color: #f6f6f6;">
       <li><h3>✔  Grammar, spelling, and proofreading</h3></li>
       <li><h3>✔  Honest feedback, comments and job search advice</h3></li>
       <li><h3>✔  Formatting and styling suggestions</h3></li>
