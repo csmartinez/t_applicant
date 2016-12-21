@@ -120,15 +120,16 @@
     <h4 style="float: right;">You have no outstanding incomplete reviews.<br><br></h4>
   <% else %>
   <div class="profileL">
-    <h2><%= current_user.fname %> <%= current_user.lname %> <small><%= current_user.email %></small></h2>
-    <br>
-    <h3>Desired Career: <small><%= current_user.career %></small></h3>
-    <h3>Career Goals: <small><%= current_user.goals %></small></h3>
+        <h2 style="color: black;"><%= current_user.fname %> <%= current_user.lname %> </h2>
+        <!-- <small><%= current_user.email %></small> -->
+        <h4 style="color: gray; margin-top: 40px;">Desired Job Title: <small><%= current_user.career %></small></h4>
+        <h4 style="color: gray;">Career Field: <small>Computer Science</small></h4>
+        <h4 style="color: gray;">Career Goals: <small><%= current_user.goals %></small></h4>
   </div>
   <div class="profileR">
     <br>
     <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #595959">Edit Profile</button></h4>
-    <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #595959">View Orders</button></h4>
+    <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #595959">My Order(s)</button></h4>
     <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #595959">Sign Out</button></h4>
   </div>
   <br>
@@ -141,43 +142,45 @@
 
   <br><br>
   <div class="leftInfo">
-    <h2 style="margin-left: 10px;">Cover Letter Review</h2>
-    <h3 style="margin-left: 90px; color: #666666;">$49.95</h3>
-    <ul class="w3-ul">
-      <li><h4>✔  1 full-page evaluation of a cover letter</h4></li>
-      <li><h4>✔  Honest feedback and job search advice</h4></li>
-      <li><h4>✔  Line-by-line comments and evaluation</h4></li>
-      <li><h4>✔  Up to 2 full-length pages</h4></li>
-      <li><h4>✔  Recieve in 7 Business Days or sooner</h4></li>
+    <h2 style="margin-left: 10px; color: #666666;">Cover Letter Review</h2>
+    <h3 style="margin-left: 90px; color: #666666;">$49.95 <small>Plus tax</small></h3>
+    <ul class="w3-ul w3-card-4 w3-tiny ls">
+      <li><h3>✔  1 full-page evaluation of a cover letter</h3></li>
+      <li><h3>✔  Honest feedback and job search advice</h3></li>
+      <li><h3>✔  Line-by-line comments and evaluation</h3></li>
+      <li><h3>✔  Up to 2 full-length pages</h3></li>
+      <li><h3>✔  Recieve in 7 Business Days or sooner</h3></li>
     </ul>
     <h4><button class="w3-btn" style="height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
   </div>
   <div class="centerInfo">
-    <h2 style="margin-left: 40px;">Resume Review</h2>
-    <h3 style="margin-left: 90px; color: #666666;">$59.95</h3>
-    <ul class="w3-ul">
-      <li><h4>✔  1 full-page evaluation of a resume</h4></li>
-      <li><h4>✔  Honest feedback and job search advice</h4></li>
-      <li><h4>✔  Formatting and career-unique advice</h4></li>
-      <li><h4>✔  Up to 2 full-length pages</h4></li>
-      <li><h4>✔  Recieve in 7 Business Days or sooner</h4></li>
+    <h2 style="margin-left: 40px; color: #666666;">Resume Review</h2>
+    <h3 style="margin-left: 90px; color: #666666;">$59.95 <small>Plus tax</small></h3>
+    <ul class="w3-ul w3-card-4 w3-tiny ls">
+      <li><h3>✔  1 full-page evaluation of a resume</h3></li>
+      <li><h3>✔  Honest feedback and job search advice</h3></li>
+      <li><h3>✔  Formatting and career-unique advice</h3></li>
+      <li><h3>✔  Up to 2 full-length pages</h3></li>
+      <li><h3>✔  Recieve in 7 Business Days or sooner</h3></li>
     </ul>
       <h4><button class="w3-btn" style="height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
   <br><br><br>
   </div>
   <div class="rightInfo">
-    <h2 style="margin-left: 30px;">Complete Editing</h2>
-    <h3 style="margin-left: 90px; color: #666666;">$69.95</h3>
-    <ul class="w3-ul">
-      <li><h4>✔  Grammar, spelling, and proofreading</h4></li>
-      <li><h4>✔  Formatting and styling suggestions</h4></li>
-      <li><h4>✔  Honest feedback, comments and job search advice</h4></li>
-      <li><h4>✔  Up to 3 full-length pages</h4></li>
-      <li><h4>✔  Recieve in 10 Business Days or sooner</h4></li>
+    <h2 style="margin-left: 30px; color: #666666;">Complete Editing</h2>
+    <h3 style="margin-left: 90px; color: #666666;">$69.95 <small>Plus tax</small></h3>
+    <ul class="w3-ul w3-card-4 w3-tiny ls">
+      <li><h3>✔  Grammar, spelling, and proofreading</h3></li>
+      <li><h3>✔  Honest feedback, comments and job search advice</h3></li>
+      <li><h3>✔  Formatting and styling suggestions</h3></li>
+      <li><h3>✔  Up to 3 full-length pages</h3></li>
+      <li><h3>✔  Recieve in 10 Business Days or sooner</h3></li>
     </ul>
     <h4><button class="w3-btn" style="height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
   </div>
-  <div style="height: 500px;"></div>
+  <div style="height: 770px;"></div>
+  <h3 style="color: gray; margin-left: 370px;"><small>All reviews are career-specific and will by evaluated by one Top Applicant member experienced in only the choosen
+      career field from your profile settings above.</small></h3>
 <% end %>
 <% else %>
   <h1>Stranger!</h1>
