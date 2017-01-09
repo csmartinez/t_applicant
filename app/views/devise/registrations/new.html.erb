@@ -18,7 +18,7 @@
 
           <table><tr>
             <td><div class="field"><h4>
-              Email:<%= f.text_field :email, autofocus: false, type: "email", size: "30x1" %></h4>
+              Email:<%= f.email_field :email, autofocus: false, type: "email", size: "30x1" %></h4>
             </div></td>
 
             </tr><tr>
@@ -49,6 +49,7 @@
           </div>
 
           <div class="actions">
-            <h4><%= f.submit "Sign Up", :class => 'btn btn-info'%></h4>
+            <h4><%= f.submit "Sign Up", :class => 'w3-btn', :style => 'height: 35px; width: 140px; background-color: #224E7A; color: white;'%></h4>
+            <br>
           </div>
 <% end %>

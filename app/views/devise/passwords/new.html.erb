@@ -2,15 +2,17 @@
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
-
+  <br>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <h4 style="color: #595959;">Email:<small>
+    <%= f.email_field :email, autofocus: true %></small></h4>
   </div>
+  <br>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+  <div class="actions"><h5>
+    <%= f.submit "Send reset password instructions", class:'w3-btn', style: 'height: 30px; width: 280px; background-color: #224E7A;' %></h5>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+<div style="height: 340px;"></div>

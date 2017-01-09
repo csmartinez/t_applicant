@@ -6,4 +6,8 @@ class HomeController < ApplicationController
 
   def show
   end
+
+  def edit
+    render :edit
+  end
 end
