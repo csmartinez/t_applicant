@@ -1,0 +1,9 @@
+.header {
+  text-align: center;
+}
+
+.grade {
+  width: 10%;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 25%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+}
