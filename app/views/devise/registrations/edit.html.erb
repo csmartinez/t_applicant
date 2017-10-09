@@ -1,39 +1,45 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 style="color: #595959;" class="w3-bottombar w3-border-grey">Edit Profile</h2><br>
 
+<div style="float: left; width: 60%; height:730px;" class="profileL">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <h4 style="color: #595959;">First Name: <small><%= f.text_field :fname, :value => current_user.fname %></small> Last Name: <small><%= f.text_field :lname, :value => current_user.lname %></small> </h4>
   </div>
-
+  <h4 style="color: #595959;">Email Address: <small><%= f.email_field :email, :value => current_user.email, :size => "30" %></small></h4>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <div><h4 style="color: #224E7A;">Currently waiting confirmation for: <%= resource.unconfirmed_email %></h4></div>
   <% end %>
-
+  <!-- <h4 style="color: #595959;">Desired Job Title: <small></small></h4> -->
+  <h4 style="color: #595959;">Career Field: <small><%= f.text_field :career, :value => current_user.career %></small></h4>
+  <h4 style="color: #595959; width: 100%;">Career Goals: <small><%= f.text_area :goals, cols: 65, rows: 4, :value => current_user.goals %></small></h4>
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <h4 style="color: #595959;">Password: <small>(Leave blank if you don't want to change it) <%= f.password_field :password, autocomplete: "off" %> </small></h4>
   </div>
-
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <h4 style="color: #595959;">Password Confirmation:<small>
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></small></h4>
+  </div>
+  <div class="field" style="margin-top: 20px;">
+    <h4 style="color: #595959;">* Current Password: <small>(Current password required to update)
+    <%= f.password_field :current_password, autocomplete: "off" %></small></h4>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
+  <h4 style="width: 100%; margin-top: 20px;">
+    <div class="actions">
+    <%= f.submit "Update Profile", class:'w3-btn', style: 'height: 35px; width: 150px; background-color: #224E7A;' %>
+    <%= link_to "Back", :back, :style => 'height: 35px; width: 70px; background-color: gray; color: white;', :class => 'w3-btn' %>
+  </div></h4>
 <% end %>
+</div>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<div style="float: right; width: 15%; margin-right: 10%;">
+    <h3>More Options</h3>
+      <br>
+      <h4 style="color: white;" class="actions">
+        <%= button_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :style => 'height: 35px; width: 170px; background-color: gray;', :class => 'w3-btn' %>
+        <br>
+        <%= link_to "Back to Profile", :back, :style => 'height: 35px; width: 170px; background-color: gray; color: white;', :class => 'w3-btn' %>
+      </h4>
+</div>

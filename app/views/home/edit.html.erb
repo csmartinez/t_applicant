@@ -82,37 +82,37 @@
           <td><h5>Doe, John</h5></td>
           <td><h5>PHP Programmer</h5></td>
           <td><h5>3 June 2016</h5></td>
-          <td><h5><button style="background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
+          <td><h5><button style="color: white; background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
         </tr>
         <tr>
           <td><h5>Smith, Stacy</h5></td>
           <td><h5>Sales Manager</h5></td>
           <td><h5>15 June 2016</h5></td>
-          <td><h5><button style="background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
+          <td><h5><button style="color: white; background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
         </tr>
         <tr>
           <td><h5>Johnson, Gary</h5></td>
           <td><h5>Dental Assistant</h5></td>
           <td><h5>2 August 2016</h5></td>
-          <td><h5><button style="background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
+          <td><h5><button style="color: white; background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
         </tr>
         <tr>
           <td><h5>Doe, Jack</h5></td>
           <td><h5>PHP Programmer</h5></td>
           <td><h5>12 June 2016</h5></td>
-          <td><h5><button style="background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
+          <td><h5><button style="color: white; background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
         </tr>
         <tr>
           <td><h5>Smith, Stanley</h5></td>
           <td><h5>Sales Manager</h5></td>
           <td><h5>15 June 2016</h5></td>
-          <td><h5><button style="background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
+          <td><h5><button style="color: white; background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
         </tr>
         <tr>
           <td><h5>Moore, Gary</h5></td>
           <td><h5>Dental Assistant</h5></td>
           <td><h5>2 August 2016</h5></td>
-          <td><h5><button style="background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
+          <td><h5><button style="color: white; background-color: #224E7A; width: 70px;" class="w3-btn w3-small">OPEN</button></h5></td>
         </tr>
       </tbody>
     </table>
@@ -132,7 +132,7 @@
         <% end %>
         <!-- <h4 style="color: #595959;">Desired Job Title: <small></small></h4> -->
         <h4 style="color: #595959;">Career Field: <small><%= f.text_field :career, :value => current_user.career %></small></h4>
-        <h4 style="color: #595959; width: 100%;">Career Goals: <small><%= f.text_area :career, cols: 65, rows: 4, :value => current_user.goals %></small></h4>
+        <h4 style="color: #595959; width: 100%;">Career Goals: <small><%= f.text_area :goals, cols: 65, rows: 4, :value => current_user.goals %></small></h4>
         <div class="field">
           <h4 style="color: #595959;">Password: <small>(Leave blank if you don't want to change it) <%= f.password_field :password, autocomplete: "off" %> </small></h4>
         </div>
@@ -145,8 +145,9 @@
           <%= f.password_field :current_password, autocomplete: "off" %></small></h4>
         </div>
 
-        <h4 style="width: 100%; margin-top: 20px;"><div class="actions">
-          <%= f.submit "Update Profile", class:'w3-btn', style: 'height: 35px; width: 150px; background-color: #224E7A;' %>
+        <h4 style="width: 100%; margin-top: 20px;">
+          <div class="actions">
+          <%= f.submit "Update Profile", class:'w3-btn', style: 'color: white; height: 35px; width: 150px; background-color: #224E7A;' %>
           <%= link_to "Back", :back, :style => 'height: 35px; width: 70px; background-color: gray; color: white;', :class => 'w3-btn' %>
         </div></h4>
         <% end %>
@@ -154,9 +155,10 @@
   </div>
   <div class="profileR" style="height: 500px;">
     <br><br>
-    <h4><button class="w3-btn" style="height: 35px; width: 240px; background-color: #595959">My Order(s)</button></h4>
-    <h4><%= button_to "Delete My Account", registration_path(resource_name), data: { confirm: "Are you sure you want to cancel your account? This action cannot be undone." }, class: 'w3-btn', style: 'height: 35px; width: 240px; background-color: #595959;', method: :delete %></h4>
-    <h4><%= link_to('Sign Out', destroy_user_session_path, :method => :delete, :class => 'w3-btn', :style => 'height: 35px; width: 240px; background-color: #595959; color: white;') %></h4>
+    <h4><button class="w3-btn" style="height: 35px; width: 240px; color: white !important; background-color: #224E7A;">My Order(s)</button></h4>
+    <h4><%= link_to('Sign Out', destroy_user_session_path, :method => :delete, :class => 'w3-btn', :style => 'color: white; height: 35px; width: 240px; background-color: #595959; color: white;') %></h4>
+    <br>
+    <h4><%= button_to "Delete My Account", registration_path(resource_name), data: { confirm: "Are you sure you want to cancel your account? This action cannot be undone." }, class: 'w3-btn', style: 'height: 35px; width: 240px; color: white; background-color: #595959;', method: :delete %></h4>
 
   </div><br><br>
   <!-- <h3>Progress</h4>
@@ -177,7 +179,7 @@
       <li><h3>✔  Up to 2 full-length pages</h3></li>
       <li><h3>✔  Recieve in 7 Business Days or sooner</h3></li>
     </ul>
-    <h4><button class="w3-btn" style="height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
+    <h4><button class="w3-btn" style="color: white; height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
   </div>
   <div class="centerInfo">
     <h2 style="margin-left: 40px; color: black;">Resume Review</h2>
@@ -189,7 +191,7 @@
       <li><h3>✔  Up to 2 full-length pages</h3></li>
       <li><h3>✔  Recieve in 7 Business Days or sooner</h3></li>
     </ul>
-      <h4><button class="w3-btn" style="height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
+      <h4><button class="w3-btn" style="color: white; height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
   <br><br><br>
   </div>
   <div class="rightInfo">
@@ -202,7 +204,7 @@
       <li><h3>✔  Up to 3 full-length pages</h3></li>
       <li><h3>✔  Recieve in 10 Business Days or sooner</h3></li>
     </ul>
-    <h4><button class="w3-btn" style="height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
+    <h4><button class="w3-btn" style="color: white; height: 40px; width: 85%; background-color: #224E7A">ORDER NOW</button></h4>
   </div>
   <div style="height: 1060px;"></div><br>
   <h3 style="color: gray; margin-left: 370px;"><small>* All reviews are career-specific and will by evaluated by one Top Applicant member experienced in only the choosen
