@@ -101,6 +101,7 @@ background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 2
     list-style: square inside url("check.png");
     margin-left: 30px;
     width: 60%;
+    display: inline;
     float: left;
 }
 
